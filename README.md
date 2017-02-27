@@ -1,3 +1,3 @@
 
-![原图](https://raw.githubusercontent.com/loonggg/CoordinatorLayoutDemo/master/image/src.gif)
+![原图](https://github.com/shaoruichao/CoordinatorLayoutDemo-master/blob/master/image/src.gif)
 
