@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ArrayList<Fragment> mFragments = new ArrayList<>();
     private final String[] mTitles = {
-            "集团介绍", "集团故事", "集团使命"
+            "集团介绍1", "集团故事2", "集团使命"
             , "集团文化"
     };
 
@@ -73,35 +73,28 @@ public class MainActivity extends AppCompatActivity {
 
         mCollapsingToolbarLayout.setTitle("掉不掉");
 
-//        blank1 = new BlankFragment();
-//        blank2 = new BlankFragment2();
-//        mFragments.add(blank1);
-//        mFragments.add(blank2);
-        for (String title : mTitles) {
-            mFragments.add(SimpleCardFragment.getInstance(title));
-        }
+        blank1 = new BlankFragment();
+        blank2 = new BlankFragment2();
+        mFragments.add(blank1);
+        mFragments.add(blank2);
+//        for (String title : mTitles) {
+//            mFragments.add(SimpleCardFragment.getInstance(title));
+//        }
 
         View decorView = getWindow().getDecorView();
         ViewPager vp = ViewFindUtils.find(decorView, R.id.vp);
-//        mAdapter = new MyPagerAdapter(getSupportFragmentManager(),mFragments);
         mAdapter = new MyPagerAdapter(getSupportFragmentManager());
         vp.setAdapter(mAdapter);
 
         /** indicator固定宽度 */
         SlidingTabLayout tabLayout_5 = ViewFindUtils.find(decorView, R.id.tl_5);
         tabLayout_5.setViewPager(vp);
-        vp.setCurrentItem(2);
+        vp.setCurrentItem(0);
 
     }
 
     private class MyPagerAdapter extends FragmentPagerAdapter {
 
-//        private List<Fragment> list;
-//
-//        public MyPagerAdapter(FragmentManager fm, ArrayList<Fragment> mFragments) {
-//            super(fm);
-//            this.list = mFragments;
-//        }
         public MyPagerAdapter(FragmentManager fm) {
             super(fm);
         }
@@ -110,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
         public int getCount() {
             return mFragments.size();
         }
-
+        /*返回头部文件*/
         @Override
         public CharSequence getPageTitle(int position) {
             return mTitles[position];
