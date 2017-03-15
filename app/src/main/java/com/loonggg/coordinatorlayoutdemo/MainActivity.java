@@ -50,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
     private BlankFragment2 blank2;
 
     private MyPagerAdapter mAdapter;
+    private BlankFragment3 blankFragment3;
+    private BlankFragment4 blankFragment4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,8 +77,13 @@ public class MainActivity extends AppCompatActivity {
 
         blank1 = new BlankFragment();
         blank2 = new BlankFragment2();
+        blankFragment3 = new BlankFragment3();
+        blankFragment4 = new BlankFragment4();
+
         mFragments.add(blank1);
         mFragments.add(blank2);
+        mFragments.add(blankFragment3);
+        mFragments.add(blankFragment4);
 //        for (String title : mTitles) {
 //            mFragments.add(SimpleCardFragment.getInstance(title));
 //        }
