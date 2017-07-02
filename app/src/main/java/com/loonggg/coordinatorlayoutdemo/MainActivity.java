@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
             "集团介绍1", "集团故事2", "集团使命"
             , "集团文化"
     };
+    //
 
     private BlankFragment blank1;
     private BlankFragment2 blank2;
